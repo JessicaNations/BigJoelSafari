@@ -39,7 +39,7 @@ namespace BigJoelSafari.Models
             }
 
             // Bonus mission: sort results alphabetically
-            values.Sort();
+                values.Sort();
             return values;
         }
 
