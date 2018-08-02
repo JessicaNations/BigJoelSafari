@@ -1,0 +1,20 @@
+﻿<h1>@ViewBag.title</h1>
+
+<h3>@ViewBag.animals.Count Result(s)</h3>
+
+@{// TODO #3 - Use the same list display from Views/Search/Index.cshtml
+    @foreach (Dictionary<string, string> animal in ViewBag.animals)
+    {
+        <div>
+            <table class="animal-listing">
+                @foreach (KeyValuePair<string, string> animals in animal)
+                {
+                    <tr>
+                        <td>@animals.Key</td>
+                        <td>@animals.Value</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+}

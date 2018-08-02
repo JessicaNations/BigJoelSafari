@@ -1,0 +1,278 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+<style>
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    #sidebar {
+        position: fixed;
+        z-index: 9999;
+    }
+</style>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <button class="btn btn-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars" style="font-size:60px"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <a class="dropdown-item" href="#">ADMISSION</a>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">EXPLORE</a>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="#">VISIT</a>
+
+            <div class="dropdown-divider">  </div>
+            <a class="dropdown-item" href="#">ABOUT</a>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="#">SUPPORT</a>
+
+        </div>
+    </nav>
+</div>
+<!-- Carousel -->
+<div class="carousel-item active">
+    <div class="overlay text-left text-primary" style="margin-left:120px">
+        <p class="display-3">Big Joel's Safari</p><br>
+        <p style="font-size:26px">Wright City, MO USA</p>
+        <p><button type="button" class="btn"><a href="#events">Plan your visit</a></button></p>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <img src="img/peacock.jpg" alt="Peacock">
+        </div>
+        <div class="carousel-item">
+            <img src="img/calf.jpg" alt="Calf">
+        </div>
+        <div class="carousel-item">
+            <img src="img/porcupine.jpg" alt="Porcupine">
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Activate Carousel
+        $("#myCarousel").carousel();
+    });
+</script>
+</div>
+<!-- Try this out-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Find animals by</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">List All</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+               id="navbardrop" data-toggle="dropdown">Size</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Extra Small</a>
+                <a class="dropdown-item" href="#">Small</a>
+                <a class="dropdown-item" href="#">Medium</a>
+                <a class="dropdown-item" href="#">Large</a>
+                <a class="dropdown-item" href="#">Extra Large</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+               id="navbardrop" data-toggle="dropdown">Origin</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Africa</a>
+                <a class="dropdown-item" href="#">Asia</a>
+                <a class="dropdown-item" href="#">Australia</a>
+                <a class="dropdown-item" href="#">Europe</a>
+                <a class="dropdown-item" href="#">North America</a>
+                <a class="dropdown-item" href="#">South America</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+               id="navbardrop" data-toggle="dropdown">Type</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">fish</a>
+                <a class="dropdown-item" href="#">amphibian</a>
+                <a class="dropdown-item" href="#">reptile</a>
+                <a class="dropdown-item" href="#">bird</a>
+                <a class="dropdown-item" href="#">mammal</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+               id="navbardrop" data-toggle="dropdown">Food Type</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Carnivore</a>
+                <a class="dropdown-item" href="#">Herbivore</a>
+                <a class="dropdown-item" href="#">Omnivore</a>
+            </div>
+        </li>
+    </ul>
+    <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search All">
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
+</nav>
+<!-- ADMISSIONS SECTIONS -->
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Admission</h1>
+    <p class="lead">Skip the line and purchase your tickets online!</p>
+    <p>
+        Last available entry is 30 minutes prior to closing.
+        Average journey through the park is 1 hour.
+    </p>
+</div>
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Single</h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">$35 <small class="text-muted">/ person</small></h1>
+            <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy Now</button>
+        </div>
+    </div>
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Group of 3</h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">$95 <small class="text-muted">/ group</small></h1>
+            <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+            <button type="button" class="btn btn-lg btn-block btn-primary">Buy Now</button>
+        </div>
+    </div>
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Group of 4</h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">$130 <small class="text-muted">/ group</small></h1>
+            <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+            <button type="button" class="btn btn-lg btn-block btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--DEFAULT HTML-->
+<!--<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how to build ASP.NET apps that can run anywhere.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    There are powerful new features in Visual Studio for building modern web apps.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Application uses</h2>
+        <ul>
+            <li>Sample pages using ASP.NET Core MVC</li>
+            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>How to</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Overview</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Run &amp; Deploy</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
+        </ul>
+    </div>
+</div>-->

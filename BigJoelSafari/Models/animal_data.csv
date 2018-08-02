@@ -1,0 +1,33 @@
+name,size,origin,type,food type
+alligator Zoo/img/alligator.jpg,,North America,reptile,carnivore
+bison,extra large,North America,mammal,omnivore
+camel,extra large,Africa,mammal,herbivore
+caracal,medium,Africa,mammal,carnivore
+chicken,small,Asia,bird,omnivore
+cockroach,extra small,South America,insect,omnivore
+cow,extra large,Africa,mammal,omnivore
+crane,medium,Europe,bird,omnivore
+deer,large,North America,mammal,herbivore
+emu,medium,Australia,bird,omnivore
+goat,medium,Europe,mammal,herbivore
+iguana,small,South America,reptile,omnivore
+kangaroo,large,Australia,mammal,herbivore
+lemur,small,Africa,mammal,herbivore
+lizard,small,Africa,reptile,omnivore
+llama,large,North America,mammal,omnivore
+monkey,medium,Africa,mammal,omnivore
+ostrich,large,Africa,bird,omnivore
+parrot,small,South America,bird,omnivore
+peacock,medium,Africa,bird,omnivore
+pidgeon,small,Europe,bird,herbivore
+pig,medium,Europe,mammal,omnivore
+pony,large,North America,mammal,herbivore
+prarie dog,small,North America,mammal,omnivore
+ram,large,Asia,mammal,herbivore
+sheep,large,Asia,mammal,omnivore
+sloth,medium,North America,mammal,omnivore
+snake,small,Africa,reptile,carnivore
+swan,small,Asia,bird,omnivore
+tarantula,extra small,North America,arachnid,carnivore
+turtle,small,South America,reptile,omnivore
+zebra,large,Africa,mammal,herbivore
