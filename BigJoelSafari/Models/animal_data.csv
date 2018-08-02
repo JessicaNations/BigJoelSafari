@@ -1,33 +1,32 @@
-name,size,origin,type,food type
-alligator Zoo/img/alligator.jpg,,North America,reptile,carnivore
-bison,extra large,North America,mammal,omnivore
-camel,extra large,Africa,mammal,herbivore
-caracal,medium,Africa,mammal,carnivore
-chicken,small,Asia,bird,omnivore
-cockroach,extra small,South America,insect,omnivore
-cow,extra large,Africa,mammal,omnivore
-crane,medium,Europe,bird,omnivore
-deer,large,North America,mammal,herbivore
-emu,medium,Australia,bird,omnivore
-goat,medium,Europe,mammal,herbivore
-iguana,small,South America,reptile,omnivore
-kangaroo,large,Australia,mammal,herbivore
-lemur,small,Africa,mammal,herbivore
-lizard,small,Africa,reptile,omnivore
-llama,large,North America,mammal,omnivore
-monkey,medium,Africa,mammal,omnivore
-ostrich,large,Africa,bird,omnivore
-parrot,small,South America,bird,omnivore
-peacock,medium,Africa,bird,omnivore
-pidgeon,small,Europe,bird,herbivore
-pig,medium,Europe,mammal,omnivore
-pony,large,North America,mammal,herbivore
-prarie dog,small,North America,mammal,omnivore
-ram,large,Asia,mammal,herbivore
-sheep,large,Asia,mammal,omnivore
-sloth,medium,North America,mammal,omnivore
-snake,small,Africa,reptile,carnivore
-swan,small,Asia,bird,omnivore
-tarantula,extra small,North America,arachnid,carnivore
-turtle,small,South America,reptile,omnivore
-zebra,large,Africa,mammal,herbivore
+Name,Size,Origin,Type,Food Type
+Alligator,Medium,North America,Reptile,Carnivore
+Bison,Extra Large,North America,Mammal,Omnivore
+Camel,Extra Large,Africa,mammal,Herbivore
+Caracal,Medium,Africa,Mammal,Carnivore
+Chicken,Small,Asia,Bird,Omnivore
+Cockroach,Extra Small,South America,Insect,Omnivore
+Cow,extra Large,Africa,Mammal,Omnivore
+Crane,Medium,Europe,Bird,Omnivore
+Deer,Large,North America,Mammal,Herbivore
+Emu,Medium,Australia,Bird,Omnivore
+Goat,Medium,Europe,Mammal,Herbivore
+Iguana,Small,South America,Reptile,Omnivore
+Kangaroo,Large,Australia,Mammal,Herbivore
+Lemur,Small,Africa,Mammal,Herbivore
+Lizard,Small,Africa,Reptile,Omnivore
+Llama,Large,North America,Mammal,Omnivore
+Monkey,Medium,Africa,Mammal,Omnivore
+Ostrich,Large,Africa,Bird,Omnivore
+Parrot,Small,South America,Bird,Omnivore
+Peacock,Medium,Africa,Bird,Omnivore
+Pidgeon,Small,Europe,Bird,Herbivore
+Pig,Medium,Europe,Mammal,Omnivore
+Pony,Large,North America,Mammal,Herbivore
+Prarie Dog,Small,North America,Mammal,Omnivore
+Sheep,Large,Asia,Mammal,Omnivore
+Sloth,Medium,North America,Mammal,Omnivore
+Snake,Small,Africa,Reptile,Carnivore
+Swan,Small,Asia,Bird,Omnivore
+Tarantula,Extra Small,North America,Arachnid,Carnivore
+Turtle,Small,South America,Reptile,Omnivore
+Zebra,Large,Africa,Mammal,Herbivore
