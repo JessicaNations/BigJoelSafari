@@ -14,10 +14,10 @@ namespace BigJoelSafari.Controllers
         static ListController()
         {
 
-            columnChoices.Add("Core Competency", "Skill");
-            columnChoices.Add("Employer", "Employer");
-            columnChoices.Add("Location", "Location");
-            columnChoices.Add("Position Type", "Position Type");
+            columnChoices.Add("Food Type", "Food Type");
+            columnChoices.Add("Size", "Size");
+            columnChoices.Add("Origin", "Origin");
+            columnChoices.Add("Type", "Type");
             columnChoices.Add("all", "All");
         }
 
