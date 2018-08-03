@@ -47,7 +47,7 @@ namespace BigJoelSafari.Data
             {
                 Size size = animalData.Sizes.AddUnique(row[1]);
                 Origin origin = animalData.Origins.AddUnique(row[2]);
-                Type positionType = animalData.Types.AddUnique(row[3]);
+                Kind kind = animalData.Kinds.AddUnique(row[3]);
                 Eat eat = animalData.Eats.AddUnique(row[4]);
 
                 Animal newAnimal = new Animal
@@ -55,7 +55,7 @@ namespace BigJoelSafari.Data
                     Name = row[0],
                     Size = size,
                     Origin = origin,
-                    Type = type,
+                    Kind = kind,
                     Eat = eat,
                 };
                 animalData.Animals.Add(newAnimal);

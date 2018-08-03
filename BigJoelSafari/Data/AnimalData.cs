@@ -14,7 +14,7 @@ namespace BigJoelSafari.Data
         public List<Animal> Animals { get; set; } = new List<Animal>();
         public AnimalFieldData<Size> Sizes { get; set; } = new AnimalFieldData<Size>();
         public AnimalFieldData<Origin> Origins { get; set; } = new AnimalFieldData<Origin>();
-        public AnimalFieldData<Type> Types { get; set; } = new AnimalFieldData<Type>();
+        public AnimalFieldData<Kind> Kinds { get; set; } = new AnimalFieldData<Kind>();
         public AnimalFieldData<Eat> Eats { get; set; } = new AnimalFieldData<Eat>();
 
 
@@ -46,7 +46,7 @@ namespace BigJoelSafari.Data
                           || j.Origin.Contains(value)
                           || j.Name.ToLower().Contains(value.ToLower())
                           || j.Eat.Contains(value)
-                          || j.Type.Contains(value)
+                          || j.Kind.Contains(value)
                           select j;
 
             return results.ToList();
@@ -81,8 +81,8 @@ namespace BigJoelSafari.Data
                     return animal.Origin;
                 case AnimalFieldType.Eat:
                     return animal.Eat;
-                case AnimalFieldType.Type:
-                    return animal.Type;
+                case AnimalFieldType.Kind:
+                    return animal.Kind;
             }
 
             throw new ArgumentException("Cannot get field of type: " + type);

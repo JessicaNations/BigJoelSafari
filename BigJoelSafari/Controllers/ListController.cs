@@ -44,18 +44,18 @@ namespace BigJoelSafari.Controllers
 
                 switch (column)
                 {
-                    case AnimalFieldType.Employer:
-                        fields = animalData.Employers.ToList().Cast<AnimalField>();
+                    case AnimalFieldType.Size:
+                        fields = animalData.Sizes.ToList().Cast<AnimalField>();
                         break;
-                    case AnimalFieldType.Location:
-                        fields = animalData.Locations.ToList().Cast<AnimalField>();
+                    case AnimalFieldType.Origin:
+                        fields = animalData.Origins.ToList().Cast<AnimalField>();
                         break;
-                    case AnimalFieldType.CoreCompetency:
-                        fields = animalData.CoreCompetencies.ToList().Cast<AnimalField>();
+                    case AnimalFieldType.Eat:
+                        fields = animalData.Eats.ToList().Cast<AnimalField>();
                         break;
-                    case AnimalFieldType.PositionType:
+                    case AnimalFieldType.Kind:
                     default:
-                        fields = animalData.PositionTypes.ToList().Cast<AnimalField>();
+                        fields = animalData.Kinds.ToList().Cast<AnimalField>();
                         break;
                 }
 

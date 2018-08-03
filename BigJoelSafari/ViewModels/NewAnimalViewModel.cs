@@ -21,8 +21,8 @@ namespace BigJoelSafari.ViewModels
         public int OriginID { get; set; }
 
         [Required]
-        [Display(Name = "Type")]
-        public int TypeID { get; set; }
+        [Display(Name = "Kind")]
+        public int KindID { get; set; }
 
         [Required]
         [Display(Name = "Eat")]
@@ -34,7 +34,7 @@ namespace BigJoelSafari.ViewModels
         public List<SelectListItem> Sizes { get; set; } = new List<SelectListItem>();
         public List<SelectListItem> Origins { get; set; } = new List<SelectListItem>();
         public List<SelectListItem> Eats { get; set; } = new List<SelectListItem>();
-        public List<SelectListItem> Types { get; set; } = new List<SelectListItem>();
+        public List<SelectListItem> Kinds { get; set; } = new List<SelectListItem>();
 
         public NewAnimalViewModel()
         {
@@ -59,9 +59,9 @@ namespace BigJoelSafari.ViewModels
                 });
             }
 
-            foreach (Type field in animalData.Types.ToList())
+            foreach (Kind field in animalData.Kinds.ToList())
             {
-                Types.Add(new SelectListItem
+                Kinds.Add(new SelectListItem
                 {
                     Value = field.ID.ToString(),
                     Text = field.Value

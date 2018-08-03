@@ -9,7 +9,7 @@
         public Size Size { get; set; }
         public Origin Origin { get; set; }
         public Eat Eat { get; set; }
-        public Type Type { get; set; }
+        public Kind Kind { get; set; }
 
         public Animal()
         {

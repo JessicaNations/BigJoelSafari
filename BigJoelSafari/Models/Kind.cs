@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BigJoelSafari.Models
 {
-    public class Type : AnimalField
+    public class Kind : AnimalField
     {
     }
 }

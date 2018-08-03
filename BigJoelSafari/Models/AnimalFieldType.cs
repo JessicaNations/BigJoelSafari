@@ -2,12 +2,12 @@
 
 namespace BigJoelSafari.Models
 {
-    public class AnimalFieldType
+    public enum AnimalFieldType
     {
         Size,
         Origin,
         Eat,
-        Type,
+        Kind,
         All
     }
 }

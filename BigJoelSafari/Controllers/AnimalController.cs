@@ -30,7 +30,7 @@ namespace BigJoelSafari.Controllers
             theRealAnimal.SizeID = theAnimal.Size.ID;
             theRealAnimal.EatID = theAnimal.Eat.ID;
             theRealAnimal.OriginID = theAnimal.Origin.ID;
-            theRealAnimal.TypeID = theAnimal.Type.ID;
+            theRealAnimal.KindID = theAnimal.Kind.ID;
 
             return View(theAnimal);
         }
@@ -57,7 +57,7 @@ namespace BigJoelSafari.Controllers
                     Size = animalData.Sizes.Find(newAnimalViewModel.SizeID),
                     Origin = animalData.Origins.Find(newAnimalViewModel.OriginID),
                     Eat = animalData.Eats.Find(newAnimalViewModel.EatID),
-                    Type = animalData.Types.Find(newAnimalViewModel.TypeID)
+                    Kind = animalData.Kinds.Find(newAnimalViewModel.KindID)
                 };
 
                 animalData.Animals.Add(newAnimal);
@@ -70,8 +70,5 @@ namespace BigJoelSafari.Controllers
 
             return View(newAnimalViewModel);
         }
-    }
-}
-    {
     }
 }
