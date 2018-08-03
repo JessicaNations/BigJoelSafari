@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BigJoelSafari.Models
 {
-    public class CoreCompetency : AnimalField
+    public class Origin : AnimalField
     {
     }
 }

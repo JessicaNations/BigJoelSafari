@@ -45,18 +45,18 @@ namespace BigJoelSafari.Data
              */
             foreach (string[] row in rows)
             {
-                Employer employer = animalData.Employers.AddUnique(row[1]);
-                Location location = animalData.Locations.AddUnique(row[2]);
-                PositionType positionType = animalData.PositionTypes.AddUnique(row[3]);
-                CoreCompetency coreCompetency = animalData.CoreCompetencies.AddUnique(row[4]);
+                Size size = animalData.Sizes.AddUnique(row[1]);
+                Origin origin = animalData.Origins.AddUnique(row[2]);
+                Type positionType = animalData.Types.AddUnique(row[3]);
+                Eat eat = animalData.Eats.AddUnique(row[4]);
 
                 Animal newAnimal = new Animal
                 {
                     Name = row[0],
-                    Employer = employer,
-                    Location = location,
-                    PositionType = positionType,
-                    CoreCompetency = coreCompetency
+                    Size = size,
+                    Origin = origin,
+                    Type = type,
+                    Eat = eat,
                 };
                 animalData.Animals.Add(newAnimal);
             }

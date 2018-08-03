@@ -12,10 +12,10 @@ namespace BigJoelSafari.Data
          */
 
         public List<Animal> Animals { get; set; } = new List<Animal>();
-        public AnimalFieldData<Employer> Employers { get; set; } = new AnimalFieldData<Employer>();
-        public AnimalFieldData<Location> Locations { get; set; } = new AnimalFieldData<Location>();
-        public AnimalFieldData<PositionType> PositionTypes { get; set; } = new AnimalFieldData<PositionType>();
-        public AnimalFieldData<CoreCompetency> CoreCompetencies { get; set; } = new AnimalFieldData<CoreCompetency>();
+        public AnimalFieldData<Size> Sizes { get; set; } = new AnimalFieldData<Size>();
+        public AnimalFieldData<Origin> Origins { get; set; } = new AnimalFieldData<Origin>();
+        public AnimalFieldData<Type> Types { get; set; } = new AnimalFieldData<Type>();
+        public AnimalFieldData<Eat> Eats { get; set; } = new AnimalFieldData<Eat>();
 
 
         private AnimalData()
@@ -42,11 +42,11 @@ namespace BigJoelSafari.Data
         public List<Animal> FindByValue(string value)
         {
             var results = from j in Animals
-                          where j.Employer.Contains(value)
-                          || j.Location.Contains(value)
+                          where j.Size.Contains(value)
+                          || j.Origin.Contains(value)
                           || j.Name.ToLower().Contains(value.ToLower())
-                          || j.CoreCompetency.Contains(value)
-                          || j.PositionType.Contains(value)
+                          || j.Eat.Contains(value)
+                          || j.Type.Contains(value)
                           select j;
 
             return results.ToList();
@@ -75,14 +75,14 @@ namespace BigJoelSafari.Data
         {
             switch (type)
             {
-                case AnimalFieldType.Employer:
-                    return animal.Employer;
-                case AnimalFieldType.Location:
-                    return animal.Location;
-                case AnimalFieldType.CoreCompetency:
-                    return animal.CoreCompetency;
-                case AnimalFieldType.PositionType:
-                    return animal.PositionType;
+                case AnimalFieldType.Size:
+                    return animal.Size;
+                case AnimalFieldType.Origin:
+                    return animal.Origin;
+                case AnimalFieldType.Eat:
+                    return animal.Eat;
+                case AnimalFieldType.Type:
+                    return animal.Type;
             }
 
             throw new ArgumentException("Cannot get field of type: " + type);
