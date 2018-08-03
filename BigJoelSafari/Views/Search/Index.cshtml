@@ -1,25 +1,27 @@
-﻿<h1>@ViewBag.title</h1>
+﻿@model BigJoelSafari.ViewModels.SearchAnimalsViewModel
+
+<h1>@Model.Title</h1>
 
 <form action="/Search/Results">
-    <h2>Search by:</h2>
-
     <p>
-        @foreach (KeyValuePair<string, string> column in ViewBag.columns)
+        @foreach (var column in Model.Columns)
         {
+            var checkedColumn = column.Equals(Model.Column);
+
             <span>
                 <input type="radio"
-                       name="searchType"
-                       id="@column.Key"
-                       value="@column.Key"
-                       checked="@column.Key == 'all''" />
-                <label for="@column.Key">@column.Value</label>
+                       name="Column"
+                       id="@column"
+                       value="@column"
+                       checked="@checkedColumn" />
+                <label for="@column">@column</label>
             </span>
         }
     </p>
 
     <p>
-        <label for="searchTerm">Keyword:</label>
-        <input type="text" name="searchTerm" id="searchTerm" />
+        <label asp-for="Value"></label>
+        <input asp-for="Value" />
     </p>
 
     <input type="submit" value="Search" />
@@ -27,23 +29,34 @@
 
 <hr />
 
-@if (ViewBag.animals != null)
+@if (Model.Animals != null)
 {
 
-    <h3>@ViewBag.animals.Count Result(s)</h3>
+    <h3>@Model.Animals.Count Result(s)</h3>
 
-    @foreach (Dictionary<string, string> animal in ViewBag.animals)
+    @foreach (var animal in Model.Animals)
     {
-        <div>
-            <table class="animal-listing">
-                @foreach (KeyValuePair<string, string> animals in animal)
-                {
-                    <tr>
-                        <td>@animals.Key</td>
-                        <td>@animals.Value</td>
-                    </tr>
-                }
-            </table>
-        </div>
+        <table class="animal-listing">
+            <tr>
+                <td>Name</td>
+                <td>@animal.Name</td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>@animal.Size</td>
+            </tr>
+            <tr>
+                <td>Origin</td>
+                <td>@animal.Origin</td>
+            </tr>
+            <tr>
+                <td>Eat</td>
+                <td>@animal.Eat</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>@animal.Type</td>
+            </tr>
+        </table>
     }
 }

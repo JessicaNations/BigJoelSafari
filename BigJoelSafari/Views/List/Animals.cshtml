@@ -1,20 +1,35 @@
-﻿<h1>@ViewBag.title</h1>
+﻿@model BigJoelSafari.ViewModels.SearchAnimalsViewModel
 
-<h3>@ViewBag.animals.Count Result(s)</h3>
+<h1>@Model.Title</h1>
 
-@{// TODO #3 - Use the same list display from Views/Search/Index.cshtml
-    @foreach (Dictionary<string, string> animal in ViewBag.animals)
+@if (Model.Animals != null)
+{
+
+    <h3>@Model.Animals.Count Result(s)</h3>
+
+    @foreach (var animal in Model.Animals)
     {
-        <div>
-            <table class="animal-listing">
-                @foreach (KeyValuePair<string, string> animals in animal)
-                {
-                    <tr>
-                        <td>@animals.Key</td>
-                        <td>@animals.Value</td>
-                    </tr>
-                }
-            </table>
-        </div>
+        <table class="animal-listing">
+            <tr>
+                <td>Name</td>
+                <td>@animal.Name</td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>@animal.Size</td>
+            </tr>
+            <tr>
+                <td>Origin</td>
+                <td>@animalOrigin</td>
+            </tr>
+            <tr>
+                <td>Eat</td>
+                <td>@animal.Eat</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>@animal.Type</td>
+            </tr>
+        </table>
     }
 }
