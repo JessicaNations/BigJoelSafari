@@ -1,23 +1,18 @@
 ﻿@model BigJoelSafari.ViewModels.NewAnimalViewModel
 
+<div asp-validation-summary="All"></div>
 
-
-<form asp-controller="Job" asp-action="New" method="post">
-    <div asp-validation-summary="All"></div>
+<form asp-controller="Animal" asp-action="New" method="post">
     <div class="form-group">
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
     </div>
     <div class="form-group">
         <label asp-for="SizeID"></label>
         <select asp-for="SizeID" asp-items="Model.Sizes"></select>
     </div>
 
-    @{
-        // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
-
-
-    }
     <div class="form-group">
         <label asp-for="OriginID"></label>
         <select asp-for="OriginID" asp-items="Model.Origins"></select>
