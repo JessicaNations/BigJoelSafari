@@ -1,58 +1,80 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BigJoelSafari.Models;
+using BigJoelSafari.Data;
+using BigJoelSafari.ViewModels;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace BigJoelSafari.Controllers
 {
     public class ListController : Controller
     {
-        internal static Dictionary<string, string> columnChoices = new Dictionary<string, string>();
+        // Our reference to the data store
+        private static AnimalData animalData;
 
-        // This is a "static constructor" which can be used
-        // to initialize static members of a class
         static ListController()
         {
-
-            columnChoices.Add("Food Type", "Food Type");
-            columnChoices.Add("Size", "Size");
-            columnChoices.Add("Origin", "Origin");
-            columnChoices.Add("Type", "Type");
-            columnChoices.Add("all", "All");
+            animalData = AnimalData.GetInstance();
         }
 
+        // Lists options for browsing, by "column"
         public IActionResult Index()
         {
-            ViewBag.columns = columnChoices;
-            return View();
+            AnimalFieldsViewModel animalFieldsViewModel = new AnimalFieldsViewModel();
+            animalFieldsViewModel.Title = "View Animal Fields";
+
+            return View(animalFieldsViewModel);
         }
 
-        public IActionResult Values(string column)
+        // Lists the values of a given column, or all animals if selected
+        public IActionResult Values(AnimalFieldType column)
         {
-            if (column.Equals("all"))
+            if (column.Equals(AnimalFieldType.All))
             {
-                List<Dictionary<string, string>> animals = AnimalData.FindAll();
-                ViewBag.title = "All Animals";
-                ViewBag.animals = animals;
-                return View("Animals");
+                SearchAnimalsViewModel animalsViewModel = new SearchAnimalsViewModel();
+                animalsViewModel.Animals = animalData.Animals;
+                animalsViewModel.Title = "All Animals";
+                return View("Animals", animalsViewModel);
             }
             else
             {
-                List<string> items = AnimalData.FindAll(column);
-                ViewBag.title = "All " + columnChoices[column] + " Values";
-                ViewBag.column = column;
-                ViewBag.items = items;
-                return View();
+                AnimalFieldsViewModel animalFieldsViewModel = new AnimalFieldsViewModel();
+
+                IEnumerable<AnimalField> fields;
+
+                switch (column)
+                {
+                    case AnimalFieldType.Employer:
+                        fields = animalData.Employers.ToList().Cast<AnimalField>();
+                        break;
+                    case AnimalFieldType.Location:
+                        fields = animalData.Locations.ToList().Cast<AnimalField>();
+                        break;
+                    case AnimalFieldType.CoreCompetency:
+                        fields = animalData.CoreCompetencies.ToList().Cast<AnimalField>();
+                        break;
+                    case AnimalFieldType.PositionType:
+                    default:
+                        fields = animalData.PositionTypes.ToList().Cast<AnimalField>();
+                        break;
+                }
+
+                animalFieldsViewModel.Fields = fields;
+                animalFieldsViewModel.Title = "All " + column + " Values";
+                animalFieldsViewModel.Column = column;
+
+                return View(animalFieldsViewModel);
             }
         }
 
-        public IActionResult Animals(string column, string value)
+        // Lists Animals with a given field matching a given value
+        public IActionResult Animals(AnimalFieldType column, string value)
         {
-            List<Dictionary<String, String>> animals = AnimalData.FindByColumnAndValue(column, value);
-            ViewBag.title = "Animals with " + columnChoices[column] + ": " + value;
-            ViewBag.animals = animals;
+            SearchAnimalsViewModel animalsViewModel = new SearchAnimalsViewModel();
+            animalsViewModel.Animals = animalData.FindByColumnAndValue(column, value);
+            animalsViewModel.Title = "Animals with " + column + ": " + value;
 
-            return View();
+            return View(animalsViewModel);
         }
     }
 }
