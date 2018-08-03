@@ -27,10 +27,10 @@ namespace BigJoelSafari.Controllers
             NewAnimalViewModel theRealAnimal = new NewAnimalViewModel();
 
             theRealAnimal.Name = theAnimal.Name;
-            theRealAnimal.EmployerID = theAnimal.Employer.ID;
-            theRealAnimal.CoreCompetencyID = theAnimal.CoreCompetency.ID;
-            theRealAnimal.LocationID = theAnimal.Location.ID;
-            theRealAnimal.PositionTypeID = theAnimal.PositionType.ID;
+            theRealAnimal.SizeID = theAnimal.Size.ID;
+            theRealAnimal.EatID = theAnimal.Eat.ID;
+            theRealAnimal.OriginID = theAnimal.Origin.ID;
+            theRealAnimal.TypeID = theAnimal.Type.ID;
 
             return View(theAnimal);
         }
@@ -54,10 +54,10 @@ namespace BigJoelSafari.Controllers
                 Animal newAnimal = new Animal
                 {
                     Name = newAnimalViewModel.Name,
-                    Employer = animalData.Employers.Find(newAnimalViewModel.EmployerID),
-                    Location = animalData.Locations.Find(newAnimalViewModel.LocationID),
-                    CoreCompetency = animalData.CoreCompetencies.Find(newAnimalViewModel.CoreCompetencyID),
-                    PositionType = animalData.PositionTypes.Find(newAnimalViewModel.PositionTypeID)
+                    Size = animalData.Sizes.Find(newAnimalViewModel.SizeID),
+                    Origin = animalData.Origins.Find(newAnimalViewModel.OriginID),
+                    Eat = animalData.Eats.Find(newAnimalViewModel.EatID),
+                    Type = animalData.Types.Find(newAnimalViewModel.TypeID)
                 };
 
                 animalData.Animals.Add(newAnimal);
