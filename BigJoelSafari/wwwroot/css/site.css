@@ -45,17 +45,17 @@ tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
 
-table.job-listing {
+table.animal-listing {
     margin: 30px auto;
     border: 1px solid #e4e4e4;
     width: 80%;
 }
 
-    table.job-listing td:first-child {
+    table.animal-listing td:first-child {
         font-weight: bold;
     }
 
-    table.job-listing td:last-child {
+    table.animal-listing td:last-child {
         width: 80%;
     }
 

@@ -6,7 +6,7 @@ namespace BigJoelSafari.ViewModels
 {
     public class AnimalFieldsViewModel : BaseViewModel
     {
-        // TODO #7.2 - Extract members common to SearchJobsViewModel
+        // TODO #7.2 - Extract members common to SearchAnimalsViewModel
         // to BaseViewModel
 
         // The current column
