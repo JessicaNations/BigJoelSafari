@@ -23,13 +23,14 @@ namespace BigJoelSafari.Controllers
             //TODO #1 - get the Animal with the given ID and pass it into the view
 
             Animal findAnimal = animalData.Find(id);
-            NewAnimalViewModel displayAnimal = new NewAnimalViewModel();
-
-            Name = findAnimal.Name,
-            SizeID = findAnimal.Size.ID,
-            EatID = findAnimal.Eat.ID,
-            OriginID = findAnimal.Origin.ID,
-            KindID = findAnimal.Kind.ID
+            NewAnimalViewModel displayAnimal = new NewAnimalViewModel
+            {
+                Name = findAnimal.Name,
+                SizeID = findAnimal.Size.ID,
+                OriginID = findAnimal.Origin.ID,
+                KindID = findAnimal.Kind.ID,
+                EatID = findAnimal.Eat.ID
+            };
 
             return View(findAnimal);
         }
