@@ -56,7 +56,7 @@ namespace BigJoelSafari.Data
                     Size = size,
                     Origin = origin,
                     Kind = kind,
-                    Eat = eat,
+                    Eat = eat
                 };
                 animalData.Animals.Add(newAnimal);
             }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using BigJoelSafari.Data;
 using BigJoelSafari.Models;
@@ -23,16 +22,16 @@ namespace BigJoelSafari.Controllers
         {
             //TODO #1 - get the Animal with the given ID and pass it into the view
 
-            Animal theAnimal = animalData.Find(id);
-            NewAnimalViewModel theRealAnimal = new NewAnimalViewModel();
+            Animal findAnimal = animalData.Find(id);
+            NewAnimalViewModel displayAnimal = new NewAnimalViewModel();
 
-            theRealAnimal.Name = theAnimal.Name;
-            theRealAnimal.SizeID = theAnimal.Size.ID;
-            theRealAnimal.EatID = theAnimal.Eat.ID;
-            theRealAnimal.OriginID = theAnimal.Origin.ID;
-            theRealAnimal.KindID = theAnimal.Kind.ID;
+            Name = findAnimal.Name,
+            SizeID = findAnimal.Size.ID,
+            EatID = findAnimal.Eat.ID,
+            OriginID = findAnimal.Origin.ID,
+            KindID = findAnimal.Kind.ID
 
-            return View(theAnimal);
+            return View(findAnimal);
         }
 
         public IActionResult New()
