@@ -13,5 +13,20 @@ namespace BigJoelSafari.Controllers
         {
             return View();
         }
+
+        public IActionResult Single()
+        {
+            return View();
+        }
+
+        public IActionResult ThreeGroup()
+        {
+            return View();
+        }
+
+        public IActionResult FourGroup()
+        {
+            return View();
+        }
     }
 }
