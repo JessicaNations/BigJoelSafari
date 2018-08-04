@@ -1,10 +1,45 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<p>View animals by:</p>
+<!--<p>View animals by:</p>
 <ul>
-    @foreach (KeyValuePair<string, string> action in ViewBag.actions)
+    /*@foreach (KeyValuePair<string, string> action in ViewBag.actions)
     {
         <li><a href="/@action.Key">@action.Value</a></li>
-    }
-</ul>
+    }*/
+</ul>-->
+<!-- Carousel-->
+<div class="carousel-item active">
+    <div class="overlay text-left text-primary" style="margin-left:120px">
+        <h1>Big Joel's Safari</h1><br>
+        <h3>Wright City, MO USA</h3><br />
+        <p><button type="button" class="btn"><a href="#events">Plan your visit</a></button></p>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/peacock.jpg" alt="Peacock">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/calf.jpg" alt="Calf">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/porcupine.jpg" alt="Porcupine">
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+

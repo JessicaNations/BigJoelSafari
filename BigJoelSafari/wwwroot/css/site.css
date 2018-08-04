@@ -33,6 +33,7 @@ textarea {
     }
 }
 
+
 .body-content {
     margin-top: 72px;
 }
@@ -61,4 +62,17 @@ table.animal-listing {
 
 label {
     margin-right: 15px;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: block;
+}
+
+#sidebar {
+    position: fixed;
+    z-index: 9999;
 }
