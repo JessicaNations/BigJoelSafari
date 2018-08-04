@@ -13,27 +13,38 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
-    <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Discover the Animals</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Search" asp-action="Index">Search</a></li>
                     <li><a asp-controller="List" asp-action="Index">List</a></li>
+                    <li><a asp-controller="Admission" asp-action="Index">Admission</a></li>
+                    <li><a asp-controller="Explore" asp-action="Index">Explore</a></li>
+                    <li><a asp-controller="Visit" asp-action="Index">Visit</a></li>
+                    <li><a asp-controller="About" asp-action="Index">About</a></li>
+                    <li><a asp-controller="Support" asp-action="Index">Support</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
     </div>
@@ -63,32 +74,32 @@
         <footer>
             <div class="row">
                 <div class="col-sm-3">
-                    <h4>Big Joel's Safari</h4>
+                    <h4 class="text-muted"><a asp-controller="Home" asp-action="Index">Big Joel's Safari</a></h4>
                 </div>
                 <div class="col-sm-3">
                     <h5>Admission</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Get Tickets</a></li>
-                        <li><a class="text-muted" href="#">Operating Hours</a></li>
+                        <li><a class="text-muted"><a asp-controller="Admission" asp-action="Index">Get Tickets</a></li>
+                        <li><a class="text-muted"><a asp-controller="About" asp-action="Index">Operating Hours</a></li>
 
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>More</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">News</a></li>
-                        <li><a class="text-muted" href="#">Employment</a></li>
-                        <li><a class="text-muted" href="#">Volunteer</a></li>
-                        <li><a class="text-muted" href="#">Email Sign Up</a></li>
-                        <li><a class="text-muted" href="#">FAQS</a></li>
+                        <li class="text-muted"><a asp-controller="About" asp-action="Index">News</a></li>
+                        <li class="text-muted"><a asp-controller="Employment" asp-action="Index">Employment</a></li>
+                        <li class="text-muted"><a asp-controller="Support" asp-action="Index">Volunteer</a></li>
+                        <li class="text-muted"><a asp-controller="Newsletter" asp-action="Index">Email Sign Up</a></li>
+                        <li class="text-muted"><a asp-controller="About" asp-action="Index">FAQS</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>Connect</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">(636) 745-3031</a></li>
-                        <li><a class="text-muted" href="#">bigjoelsafari@bigjoelsafari.com</a></li>
-                        <li><a class="text-muted" href="#">13187 State Highway M, Wright City MO 63390</a></li>
+                        <li><a class="text-muted">(636) 745-3031</a></li>
+                        <li><a class="text-muted" href="mailto:bigjoelsafari@bigjoelsafari.com">bigjoelsafari@bigjoelsafari.com</a></li>
+                        <li><a class="text-muted" href="https://tinyurl.com/y7ho7nk9">13187 State Highway M, Wright City MO 63390</a></li>
                         <li class="text-muted" style="font-size:30px">
                             <a href="https://www.tripadvisor.com/Attraction_Review-g45064-d4235307-Reviews-Big_Joel_s_Safari-Wright_City_Missouri.html/">
                                 <i class="fa fa-tripadvisor"></i>
@@ -105,5 +116,8 @@
             </div>
         </footer>
     </div>
+    <footer>
+        <p>&copy; 2018 - test</p>
+    </footer>
 </body>
 </html>
