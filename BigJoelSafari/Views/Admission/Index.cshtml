@@ -1,0 +1,182 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Admission";
+}
+<!-- ADMISSIONS SECTIONS -->
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Admission</h1>
+    <p class="lead">Skip the line and purchase your tickets online!</p>
+    <p>
+        Last available entry is 30 minutes prior to closing.
+        Average journey through the park is 1 hour.
+    </p>
+</div>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Single</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$35 <small class="text-muted">/ person</small></h1>
+                    <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy Now</button>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Group of 3</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$95 <small class="text-muted">/ group</small></h1>
+                    <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+                <button type="button" class="btn btn-lg btn-block btn-primary">Buy Now</button>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Group of 4</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$130 <small class="text-muted">/ group</small></h1>
+                    <img class="img-fluid" src="img/safarilogo.png" alt="Logo">
+                <button type="button" class="btn btn-lg btn-block btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- HOURS SECTION -->
+    <div class="container">
+        <div class="hour-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Hours</h1>
+            <p class="lead">Please check the calendar for the hours on the day of your visit.</p>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3" style="padding-top:42px">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                Spring Season
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="text-primary">March 24 - Memorial Day</li>
+                                    <li>Monday Closed</li>
+                                    <li>Tuesday Closed</li>
+                                    <li>Wednesday Closed</li>
+                                    <li>Thursday 9AM-5PM</li>
+                                    <li>Friday 9AM-5PM</li>
+                                    <li>Saturday 9AM-5PM</li>
+                                    <li>Sunday 11AM-5PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                Summer Season
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="text-primary">Memorial Day - Labor Day</li>
+                                    <li>Monday 9AM-5PM</li>
+                                    <li>Tuesday Closed</li>
+                                    <li>Wednesday Closed</li>
+                                    <li>Thursday 9AM-5PM</li>
+                                    <li>Friday 9AM-5PM</li>
+                                    <li>Saturday 9AM-5PM</li>
+                                    <li>Sunday 11AM-5PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                Fall Season
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="text-primary">Labor Day - Nov 4</li>
+                                    <li>Monday Closed</li>
+                                    <li>Tuesday Closed</li>
+                                    <li>Wednesday Closed</li>
+                                    <li>Thursday 9AM-5PM</li>
+                                    <li>Friday 9AM-5PM</li>
+                                    <li>Saturday 9AM-5PM</li>
+                                    <li>Sunday 11AM-5PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9" style="padding-bottom:42px">
+                <iframe src="https://calendar.google.com/calendar/embed?src=kvieirsmbq28hdn2koadkik100%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- EXPLORE SECTION -->
+    <div class="container">
+        <div class="explore-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Explore</h1>
+            <p class="lead">Open from 9-5 each day the park is open, weather permitting.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="img/safarilogo.png" class="rounded-circle" alt="Birds">
+                <h5>Parakeet Encounter</h5>
+                <h6>Open all day from May 30 - Sept 5, weather permitting.</h6>
+                <p>
+                    Feed our many fine-feathered friends in our
+                    open aviary. Many will actually land on your feeding stick, your
+                    hand, or even your head!
+                </p>
+                <h5 class="text-primary menu-price">$2<small class="text-muted">/ per stick</small></h5>
+                <img src="img/safarilogo.png" alt="Camel">
+                <h5>Camel Rides</h5>
+                <h6>Open all day from May 30 - Sept 5, weather permitting.</h6>
+                <p>
+                    For ages 2 years and older.
+                    More than one person may ride with a weight limit of 250 lbs. Helmet not provided.
+                </p>
+                <h5 class="text-primary menu-price">$5<small class="text-muted">/ per rider</small></h5>
+            </div>
+            <div class="col-sm-6">
+
+                <img src="img/safarilogo.png" alt="Pony">
+                <h5>Pony and Donkey Rides</h5>
+                <h6>Open all day from May 30 - Sept 5, weather permitting.</h6>
+                <p>
+                    For ages 2 years and older with a weight limit of 80 lbs.
+                    Younger riders may require a parent to walk along side the pony. Helmet not provided.
+                </p>
+                <h5 class="text-primary menu-price">$5<small class="text-muted">/ per rider</small></h5>
+
+                <img src="img/safarilogo.png" alt="Wagon">
+                <h5>Wagon Rides</h5>
+                <h6>Open all day from Sept 5 - Nov 1, weather permitting.</h6>
+                <p>
+                    Fall time is park owners, Big Joel and Mimi's favorite time of the year!
+                    They love to decorate for the fall season and especially for Halloween, transforming Big Joel's Safari into Big Joel's Spooky Safari!
+                    The wagon ride takes you in our old hay wagon with our trusty old tractor on a tour through our large field, which is home to our deer,
+                    elk, bison, and watusi cattle as well as our many ducks and geese.
+                    During the tour, our ride operator will inform you about our animal residents and facts about Big Joel's Safari!
+                </p>
+                <h5 class="text-primary menu-price">$2.50<small class="text-muted">/ per rider</small></h5>
+
+            </div>
+        </div>
+    </div>

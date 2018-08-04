@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="~/images/favicon-16x16.png" sizes="16x16" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BigJoelSafari :: @ViewData["title"]</title>
 
     <environment names="Development">
@@ -23,7 +24,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Big Joel's Safari</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Discover the Animals</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -55,5 +56,50 @@
     </environment>
 
     @RenderSection("scripts", required: false)
+    <!-- FOOTER SECTION -->
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>Big Joel's Safari</h4>
+            </div>
+            <div class="col-sm-3">
+                <h5>Admission</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Get Tickets</a></li>
+                    <li><a class="text-muted" href="#">Operating Hours</a></li>
+
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>More</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">News</a></li>
+                    <li><a class="text-muted" href="#">Employment</a></li>
+                    <li><a class="text-muted" href="#">Volunteer</a></li>
+                    <li><a class="text-muted" href="#">Email Sign Up</a></li>
+                    <li><a class="text-muted" href="#">FAQS</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Connect</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">(636) 745-3031</a></li>
+                    <li><a class="text-muted" href="#">bigjoelsafari@bigjoelsafari.com</a></li>
+                    <li><a class="text-muted" href="#">13187 State Highway M, Wright City MO 63390</a></li>
+                    <li class="text-muted" style="font-size:30px">
+                        <a href="https://www.tripadvisor.com/Attraction_Review-g45064-d4235307-Reviews-Big_Joel_s_Safari-Wright_City_Missouri.html/">
+                            <i class="fa fa-tripadvisor"></i>
+                        </a>
+                        <a href="https://www.facebook.com/bigjoelsafari/">
+                            <i class="fa fa-facebook-official"></i>
+                        </a>
+                        <a href="https://www.instagram.com/explore/locations/409581306/big-joels-safari-petting-zoo-educational-park/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
