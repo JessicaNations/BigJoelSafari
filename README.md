@@ -22,7 +22,13 @@ this capstone program, but instead want to focus on 4 key features.
 - Javascript
 - Microsoft Visual Studio
 
+## My Screenshot
+
+My site is minimalistic and mobile friendly.
+
 ![Image of a Screenshot of my page](https://github.com/JessicaNations/BigJoelSafari/blob/master/screenshot.png)
+
+## Old Screenshot
 
 The current site is somewhat overwhelmingly text-based, and not mobile friendly.
 
