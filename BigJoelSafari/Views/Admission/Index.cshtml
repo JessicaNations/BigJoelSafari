@@ -5,73 +5,66 @@
     ViewData["Title"] = "Admission";
 }
 <!-- ADMISSIONS SECTIONS -->
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Admission</h1>
-    <p class="lead">Skip the line and purchase your tickets online!</p>
-    <p>
-        Last available entry is 30 minutes prior to closing.
-        Average journey through the park is 1 hour.
-    </p>
+<div class="pricing-header text-center" padding-bottom: 50px;>
+    <h1>Admission</h1>
+    <h2>Skip the line and purchase your tickets online!</h2>
+    <h3>Last available entry is 30 minutes prior to closing.
+        Average journey through the park is 1 hour.</h3>
 </div>
-<div class="container">
-    <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Single</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$35 <small class="text-muted">/ person</small></h1>
-                <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo">
-                <form style="display: inline" action="https://fs2.formsite.com/P7uNio/form1/index.html" method="get">
-                    <button>Buy Now</button>
-                </form>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Group of 3</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$95 <small class="text-muted">/ group</small></h1>
-                <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo">
-                <form style="display: inline" action="https://fs2.formsite.com/P7uNio/form1/index.html" method="get">
-                    <button>Buy Now</button>
-                </form>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Group of 4</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">$130 <small class="text-muted">/ group</small></h1>
-                <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo">
-                <form style="display: inline" action="https://fs2.formsite.com/P7uNio/form1/index.html" method="get">
-                    <button>Buy Now</button>
-                </form>
-            </div>
-        </div>
+
+<div class="row">
+    <div class="col-lg-4 text-center">
+        <h2>Season Pass</h2>
+        <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo" width="140" height="140">
+        <h2>Single</h2>
+        <h1>$35 <small class="text-muted">/ person</small></h1>
+        <a href="https://fs2.formsite.com/P7uNio/form1/index.html" class="btn btn-lg btn-block btn-primary">
+            Buy Now
+        </a>
     </div>
+    <div class="col-lg-4 text-center">
+        <h2>Season Pass</h2>
+        <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo" width="140" height="140">
+        <h2>Group of Three</h2>
+        <h1>$95 <small class="text-muted">/ person</small></h1>
+        <a href="https://fs2.formsite.com/P7uNio/form1/index.html" class="btn btn-lg btn-block btn-primary">
+            Buy Now
+        </a>
     </div>
+    <div class="col-lg-4 text-center">
+        <h2>Season Pass</h2>
+        <img class="img-fluid" src="~/images/safarilogo.png" alt="Logo" width="140" height="140">
+        <h2>Group of Four</h2>
+        <h1>$130 <small class="text-muted">/ person</small></h1>
+        <a href="https://fs2.formsite.com/P7uNio/form1/index.html" class="btn btn-lg btn-block btn-primary">
+            Buy Now
+        </a>
+    </div>
+</div>
+
+
     <!-- HOURS SECTION -->
     <div class="container">
-        <div class="hour-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Hours</h1>
-            <p class="lead">Please check the calendar for the hours on the day of your visit.</p>
+        <div class="hour-header text-center" padding-bottom: 50px;>
+            <h1>Hours</h1>
+            <h3>Please check the calendar for the hours on the day of your visit.</h3>
 
         </div>
 
         <div class="row">
             <div class="col-sm-3" style="padding-top:42px">
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                                Spring Season
-                            </a>
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    Spring Season
+                                </a>
+                            </h4>
                         </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                            <div class="card-body">
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
                                 <ul class="list-unstyled">
                                     <li class="text-primary">March 24 - Memorial Day</li>
                                     <li>Monday Closed</li>
@@ -84,53 +77,59 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                                Summer Season
-                            </a>
                         </div>
-                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li class="text-primary">Memorial Day - Labor Day</li>
-                                    <li>Monday 9AM-5PM</li>
-                                    <li>Tuesday Closed</li>
-                                    <li>Wednesday Closed</li>
-                                    <li>Thursday 9AM-5PM</li>
-                                    <li>Friday 9AM-5PM</li>
-                                    <li>Saturday 9AM-5PM</li>
-                                    <li>Sunday 11AM-5PM</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                                Fall Season
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li class="text-primary">Labor Day - Nov 4</li>
-                                    <li>Monday Closed</li>
-                                    <li>Tuesday Closed</li>
-                                    <li>Wednesday Closed</li>
-                                    <li>Thursday 9AM-5PM</li>
-                                    <li>Friday 9AM-5PM</li>
-                                    <li>Saturday 9AM-5PM</li>
-                                    <li>Sunday 11AM-5PM</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-9" style="padding-bottom:42px">
-                <iframe src="https://calendar.google.com/calendar/embed?src=kvieirsmbq28hdn2koadkik100%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>
-        </div>
-    </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                Summer Season
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <ul class="list-unstyled">
+                                                <li class="text-primary">Memorial Day - Labor Day</li>
+                                                <li>Monday 9AM-5PM</li>
+                                                <li>Tuesday Closed</li>
+                                                <li>Wednesday Closed</li>
+                                                <li>Thursday 9AM-5PM</li>
+                                                <li>Friday 9AM-5PM</li>
+                                                <li>Saturday 9AM-5PM</li>
+                                                <li>Sunday 11AM-5PM</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                            Fall Season
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse3" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        <ul class="list-unstyled">
+                                                            <li class="text-primary">Labor Day - Nov 4</li>
+                                                            <li>Monday Closed</li>
+                                                            <li>Tuesday Closed</li>
+                                                            <li>Wednesday Closed</li>
+                                                            <li>Thursday 9AM-5PM</li>
+                                                            <li>Friday 9AM-5PM</li>
+                                                            <li>Saturday 9AM-5PM</li>
+                                                            <li>Sunday 11AM-5PM</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                           </div>
+                                        </div>
+
+
+                                                <div class="col-sm-9" style="padding-bottom:42px">
+                                                    <iframe src="https://calendar.google.com/calendar/embed?src=kvieirsmbq28hdn2koadkik100%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                       </div>
