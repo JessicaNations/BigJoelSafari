@@ -21,5 +21,9 @@ namespace BigJoelSafari.Controllers
         {
             return View();
         }
+        public IActionResult Hours()
+        {
+            return View();
+        }
     }
 }
