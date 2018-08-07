@@ -1,92 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "About";
 }
 
-<!-- HOURS SECTION -->
-<div class="container">
-    <div class="hour-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Hours</h1>
-        <p class="lead">Please check the calendar for the hours on the day of your visit.</p>
-
+<!-- Mission Section -->
+<div class="w3-container w3-center" style="padding:128px 16px" id="about">
+    <div class="w3-panel w3-theme-d1">
+        <h3>About Us</h3>
+        <p class="w3-large">Established 2012</p>
     </div>
-
-
-    api.openweathermap.org/data/2.5/weather?lat={38.790293}&lon={-91.025773}
-
-
-    <div class="row">
-        <div class="col-sm-3" style="padding-top:42px">
-            <div id="accordion">
-                <div class="card">
-                    <div class="card-header">
-                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                            Spring Season
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="text-primary">March 24 - Memorial Day</li>
-                                <li>Monday Closed</li>
-                                <li>Tuesday Closed</li>
-                                <li>Wednesday Closed</li>
-                                <li>Thursday 9AM-5PM</li>
-                                <li>Friday 9AM-5PM</li>
-                                <li>Saturday 9AM-5PM</li>
-                                <li>Sunday 11AM-5PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                            Summer Season
-                        </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="text-primary">Memorial Day - Labor Day</li>
-                                <li>Monday 9AM-5PM</li>
-                                <li>Tuesday Closed</li>
-                                <li>Wednesday Closed</li>
-                                <li>Thursday 9AM-5PM</li>
-                                <li>Friday 9AM-5PM</li>
-                                <li>Saturday 9AM-5PM</li>
-                                <li>Sunday 11AM-5PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            Fall Season
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="text-primary">Labor Day - Nov 4</li>
-                                <li>Monday Closed</li>
-                                <li>Tuesday Closed</li>
-                                <li>Wednesday Closed</li>
-                                <li>Thursday 9AM-5PM</li>
-                                <li>Friday 9AM-5PM</li>
-                                <li>Saturday 9AM-5PM</li>
-                                <li>Sunday 11AM-5PM</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="w3-row-padding" style="margin-top:64px">
+        <div class="w3-half w3-margin-bottom">
+            <div class="w3-card">
+                <img src="img/joel.jpg" alt="Joel" style="width:100%" alt="logo">
+                <div class="w3-container">
+                    <h3>Joel Clinger</h3>
+                    <p class="w3-opacity">Owner and Founder</p>
+                    <p>Joel has always had a passion for animals and got his first "exotic" pet, a ball python when he was 6 years old. It only grew from there as you can see today and Big Joel is the main culprit! He played college football for Mizzou and graduated with his degree in Animal Sciences in 2007.</p>
+                    <a href="bigjoelsafari@bigjoelsafari.com"><p><button class="w3-button w3-theme-d1 w3-block"><i class="fa fa-envelope"></i> Contact</button></p></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-9" style="padding-bottom:42px">
-            <iframe src="https://calendar.google.com/calendar/embed?src=kvieirsmbq28hdn2koadkik100%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="w3-half w3-margin-bottom">
+            <div class="w3-card">
+                <img src="img/cropsign.png" alt="Mimi" style="width:100%">
+                <div class="w3-container">
+                    <h3>Mimi</h3>
+                    <p class="w3-opacity">Co-owner</p>
+                    <p>Melissa, "Mimi" met Joel at Mizzou where she took veterinary class. She currently works as an occuppational therapist.</p>
+                    <p><button class="w3-button w3-theme-d1 w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</div>   

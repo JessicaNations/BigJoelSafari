@@ -9,5 +9,21 @@ namespace BigJoelSafari.Controllers
         {
             return View();
         }
+        public IActionResult Policies()
+        {
+            return View();
+        }
+        public IActionResult FAQS()
+        {
+            return View();
+        }
+        public IActionResult Directions()
+        {
+            return View();
+        }
+        public IActionResult Education()
+        {
+            return View();
+        }
     }
 }
