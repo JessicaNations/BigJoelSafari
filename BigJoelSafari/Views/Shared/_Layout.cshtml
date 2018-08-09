@@ -45,6 +45,33 @@
                     <li><a asp-controller="About" asp-action="Index">About</a></li>
                     <li><a asp-controller="Support" asp-action="Index">Support</a></li>
                 </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    
+                </form>
+                <script type="text/javascript">
+
+                    // Google Internal Site Search script- By JavaScriptKit.com (http://www.javascriptkit.com)
+                    // For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+                    // This notice must stay intact for use
+
+                    //Enter domain of site to search.
+                    var domainroot = "www.bigjoelsafari.com"
+
+                    function Gsitesearch(curobj) {
+                        curobj.q.value = "site:" + domainroot + " " + curobj.qfront.value
+                    }
+
+                </script>
+
+
+                <form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
+                    <div class="form-group">
+                        <input name="q" type="hidden" />
+                        <input name="qfront" type="text" style="width: 180px" class="form-control" placeholder="Search.." />
+                        <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </nav>
