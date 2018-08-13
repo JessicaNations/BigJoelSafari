@@ -9,7 +9,69 @@
         <h3>Please check the calendar for the hours on the day of your visit.</h3>
 
     </div>
-
+    <script>
+        /**
+ * Weather Forecast Plugin
+ * Author: Frederick King
+ * 
+ **/
+(function(window, document, $, undefined) {
+    var api = {
+        load: function(zip, $elem) {
+            var self = this;
+            // XDomain Request for IE8/IE9 :(
+            if ($.browser.msie && parseInt($.browser.version, 10) >= 8 && window.XDomainRequest) {
+                // console.log('Microsoft IE version #' + $.browser.version);
+                // Use Microsoft XDR :(
+                var xdr = new XDomainRequest();
+                xdr.open("get", "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Fxml.weather.yahoo.com%2Fforecastrss%2F" + zip + "_f.xml'&format=json");
+                xdr.onload = function() {
+                    json = 'json = ' + xdr.responseText; // the string now looks like..  json = { ... };
+                    eval(json); // json is now a regular JSON object
+                    self.draw(json.query.results.item.forecast, $elem); // parse using same function as for jQuery's success event
+                }
+                xdr.send();
+            } else {
+                $.ajax({
+                    url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Fxml.weather.yahoo.com%2Fforecastrss%2F" + zip + "_f.xml'&format=json",
+                    dataType: 'json',
+                    success: function(data) {
+                        self.draw(data.query.results.item.forecast, $elem);
+                    }
+                });
+            }
+        },
+        draw: function(data, $elem) { /* Iterate through each forecast item */
+            $.each(data, function() {
+                var data = this,
+                    code = data.code,
+                    date = data.date,
+                    day = data.day,
+                    high = data.high,
+                    low = data.low,
+                    text = data.text,
+                    markup = '' + '<div class="weatherItem ' + text + '" >' + '<div class="weatherDay">' + day + '</div>' + '<div class="weatherDate">' + new Date(date).format('MM/dd') + '</div>' + '<div class="weatherImage"></div>' + '<div class="weatherRange">' + '<div class="high" >Hi: ' + high + '</div>' + '<div class="low" >Lo: ' + low + '</div>' + '</div>' + '</div>';
+                $elem.append(markup);
+            });
+        }
+    }; /*    jQuery Entry Point */
+    $.fn.forecast = function(options) {
+        var opts = {},
+            $elem = this;
+        $.extend(opts, options, {});
+        $elem.each(function() {
+            var $elem = $(this);
+            api.load(opts.zip, $elem);
+        });
+        return this;
+    };
+    $(document).ready(function() {
+        $('#forecast').forecast({
+            'zip': '63390'
+        });
+    });
+})(window, document, jQuery);​
+    </script>
     <div class="row">
         <div class="col-sm-3" style="padding-top:42px">
 
@@ -25,7 +87,7 @@
                     <div id="collapse1" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul class="list-unstyled">
-                                <li class="text-primary">March 24 - Memorial Day</li>
+                                <li class="text-primary">March 24 - <a href="https://tinyurl.com/yd9reety">Memorial Day</a></li>
                                 <li>Monday Closed</li>
                                 <li>Tuesday Closed</li>
                                 <li>Wednesday Closed</li>
@@ -48,7 +110,7 @@
                     <div id="collapse2" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul class="list-unstyled">
-                                <li class="text-primary">Memorial Day - Labor Day</li>
+                                <li class="text-primary"><a href="https://tinyurl.com/yd9reety">Memorial Day - </a><a href="https://tinyurl.com/yabnfslv">Labor Day</a></li>
                                 <li>Monday 9AM-5PM</li>
                                 <li>Tuesday Closed</li>
                                 <li>Wednesday Closed</li>
@@ -71,7 +133,7 @@
                     <div id="collapse3" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul class="list-unstyled">
-                                <li class="text-primary">Labor Day - Nov 4</li>
+                                <li class="text-primary"><a href="https://tinyurl.com/yabnfslv">Labor Day</a> - Nov 4</li>
                                 <li>Monday Closed</li>
                                 <li>Tuesday Closed</li>
                                 <li>Wednesday Closed</li>
