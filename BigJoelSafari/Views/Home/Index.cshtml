@@ -2,26 +2,27 @@
     ViewBag.Title = "Home";
 }
 
-<div class="row top">
+<div class="row">
 
-    <section class="col-md-12">
+    <div class="container col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
-            <!-- The slideshow -->
-            <div class="carousel-inner">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="~/images/peacock.jpg" alt="Peacock" class="img-responsive" />
-                </div>
-                <div class="item">
-                    <img src="~/images/calf.jpg" alt="Calf" class="img-responsive">
-                </div>
-                <div class="item">
-                    <img src="~/images/porcupine.jpg" alt="Porcupine" class="img-responsive">
-                </div>
+                    <img src="~/images/peacock.jpg" alt="Peacock" class="fill img-responsive d-block w-100" />
+               </div>
+               <div class="item">
+                   <img src="~/images/calf.jpg" alt="Calf" class="fill img-responsive d-block w-100">
+               </div>
+               <div class="item">
+                   <img src="~/images/porcupine.jpg" alt="Porcupine" class="fill img-responsive d-block w-100">
+               </div>
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -46,5 +47,5 @@
                 </div>
             </div>
         </div>
-    </section>
     </div>
+</div>

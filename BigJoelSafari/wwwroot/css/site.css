@@ -32,21 +32,19 @@ textarea {
 }
 
 /* TESTING FULL CAROUSEL */
+/* carousel fullscreen */
+
 html, body {
     height: 100%;
+    
 }
 
-.carousel, .item, .active {
+.carousel-inner, .carousel, .item, .container, .fill {
     height: 100%;
+    width: 100%;
+    background-position: center center;
 }
 
-.carousel-inner {
-    height: 100%;
-}
-
-    .carousel-inner > .item > img {
-        height: 100%;
-    }
 
 
 /* other css */
@@ -112,4 +110,3 @@ label {
         color: #000;
         background-color: #FFF;
     }
-
