@@ -3,8 +3,8 @@
 My local petting zoo is a mere 6 years old and has an outdated, text-based website. 
 I want to rebuild their site and give it user-focused features with room to grow. 
 I want the zoo to have a more professional web presence to help drive traffic. 
-I don't expect to be able to produce a fully fleshed-out site over the next 8 weeks of 
-this capstone program, but instead want to focus on 4 key features.
+I have attempted to fully produce as much content as possible over the course of the 
+8 week capstone program, with a special focus on 4 key features.
 
 ## Features
 
