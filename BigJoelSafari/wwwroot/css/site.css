@@ -23,7 +23,6 @@ textarea {
     line-height: 1.4;
 }
 
-
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
@@ -31,7 +30,6 @@ textarea {
         display: none
     }
 }
-
 
 .body-content {
     margin-top: 72px;
@@ -62,10 +60,6 @@ table.animal-listing {
 label {
     margin-right: 15px;
 }
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
 
 .wrapper {
     display: block;
@@ -75,10 +69,6 @@ label {
     position: fixed;
     z-index: 9999;
 }
-
-
-
-
 
 .main-text {
     position: absolute;
@@ -103,7 +93,4 @@ label {
         color: #000;
         background-color: #FFF;
     }
-
-
-
 
