@@ -25,5 +25,9 @@ namespace BigJoelSafari.Controllers
         {
             return View();
         }
+        public IActionResult JNBio()
+        {
+            return View();
+        }
     }
 }
