@@ -19,8 +19,8 @@ I have attempted to fully produce as much content as possible over the course of
 - ASP.Net
 - HTML/CSS
 - Bootstrap 4
-- Javascript
-- Microsoft Visual Studio
+- JavaScript
+- Microsoft Visual Studio IDE
 
 ## My Screenshot
 
