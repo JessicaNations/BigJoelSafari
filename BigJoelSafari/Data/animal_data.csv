@@ -1,9 +1,9 @@
 name,size,origin,kind,eat
 Alligator,Medium,North America,Reptile,Carnivore
 Bison,Extra Large,North America,Mammal,Omnivore
-Camel,Extra Large,Africa,mammal,Herbivore
+Camelids,Extra Large,Africa,mammal,Herbivore
 Caracal,Medium,Africa,Mammal,Carnivore
-Chicken,Small,Asia,Bird,Omnivore
+Poultry,Small,Asia,Bird,Omnivore
 Cockroach,Extra Small,South America,Insect,Omnivore
 Cow,extra Large,Africa,Mammal,Omnivore
 Crane,Medium,Europe,Bird,Omnivore
@@ -21,7 +21,7 @@ Parrot,Small,South America,Bird,Omnivore
 Peacock,Medium,Africa,Bird,Omnivore
 Pidgeon,Small,Europe,Bird,Herbivore
 Pig,Medium,Europe,Mammal,Omnivore
-Pony,Large,North America,Mammal,Herbivore
+Equine,Large,North America,Mammal,Herbivore
 Prarie Dog,Small,North America,Mammal,Omnivore
 Sheep,Large,Asia,Mammal,Omnivore
 Sloth,Medium,North America,Mammal,Omnivore
